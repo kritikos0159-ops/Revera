@@ -725,8 +725,7 @@ class WebPlayerHost(private val context: Context) : BridgeHost {
      * a sign-in behind (the cookies and storage of a flow that never finished), and Spotify's page
      * answers "Oops! Something went wrong" to a flow it cannot match with its own state.
      */
-    fun retryLogin() = main.post { beginLoginLoad(); cleanSlate { view.loadUrl(LOGIN_URL) } }
-
+fun retryLogin() = main.post { beginLoginLoad(); cleanSlate { view.loadUrl(LOGIN_URL) } }
     /**
      * Before a report sent from the sign-in: what the page shows right now (its path, title, the
      * error messages on it, which kind of step), into the log. The failed sign-ins reported
